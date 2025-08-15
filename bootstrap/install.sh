@@ -14,4 +14,7 @@ ln -snf "$DOT/zsh"/* "$HOME/.config/zsh"
 mkdir -p "$XDG_CONFIG_HOME"
 ln -snf "$DOT/nvim" "$XDG_CONFIG_HOME/nvim"
 
+# tmux
+ln -snf "$DOT/tmux.conf" "$HOME/.tmux.conf"
+
 echo "Done."
