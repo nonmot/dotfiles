@@ -17,4 +17,7 @@ ln -snf "$DOT/nvim" "$XDG_CONFIG_HOME/nvim"
 # tmux
 ln -snf "$DOT/tmux.conf" "$HOME/.tmux.conf"
 
+# Homebrew
+ln -snf "$DOT/Brewfile" "$HOME/.Brewfile"
+
 echo "Done."
