@@ -1,0 +1,7 @@
+# XDG
+: ${XDG_CONFIG_HOME:=$HOME/.config}
+ZDOTDIR=${ZDOTDIR:-${XDG_CONFIG_HOME}/zsh}
+
+if [[ -r "$ZDOTDIR/init.zsh" ]]; then
+  source "$ZDOTDIR/init.zsh"
+fi
