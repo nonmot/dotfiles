@@ -40,5 +40,7 @@ return {
         lspconfig.cssls.setup {
             capabilities = capabilities,
         }
+        lspconfig.terraform_lsp.setup {
+        }
     end,
 }
