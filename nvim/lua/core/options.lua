@@ -41,3 +41,7 @@ vim.o.wildmenu = true
 
 -- Colorscheme
 vim.cmd[[colorscheme tokyonight]]
+vim.cmd[[
+  highlight NvimTreeNormal guibg=none
+  highlight NvimTreeNormalNC guibg=none
+]]
