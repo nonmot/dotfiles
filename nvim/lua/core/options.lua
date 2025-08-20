@@ -38,3 +38,6 @@ vim.api.nvim_create_autocmd("FileType", {
 -- Completion
 vim.o.wildmode = 'longest:full,full'
 vim.o.wildmenu = true
+
+-- Colorscheme
+vim.cmd[[colorscheme tokyonight]]
