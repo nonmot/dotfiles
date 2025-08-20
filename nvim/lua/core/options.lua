@@ -12,7 +12,7 @@ opt.shiftwidth = 2
 opt.ignorecase = true
 opt.smartcase = true
 
--- Clipboard 
+-- Clipboard
 opt.clipboard = "unnamedplus"
 
 -- swapfile
@@ -24,24 +24,24 @@ opt.winblend = 0
 opt.pumblend = 0
 
 -- Leader
-vim.g.mapleader = ' '
+vim.g.mapleader = " "
 
 -- Comment
 vim.api.nvim_create_autocmd("FileType", {
-    pattern = "*",
-    callback = function()
-        vim.opt_local.formatoptions:remove("r")
-        vim.opt_local.formatoptions:remove("o")
-    end
+	pattern = "*",
+	callback = function()
+		vim.opt_local.formatoptions:remove("r")
+		vim.opt_local.formatoptions:remove("o")
+	end,
 })
 
 -- Completion
-vim.o.wildmode = 'longest:full,full'
+vim.o.wildmode = "longest:full,full"
 vim.o.wildmenu = true
 
 -- Colorscheme
-vim.cmd[[colorscheme tokyonight]]
-vim.cmd[[
+vim.cmd([[colorscheme tokyonight]])
+vim.cmd([[
   highlight NvimTreeNormal guibg=none
   highlight NvimTreeNormalNC guibg=none
-]]
+]])
