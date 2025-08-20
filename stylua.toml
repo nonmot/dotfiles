@@ -1,2 +1,2 @@
-indent_types = "Tabs"
+indent_type = "Tabs"
 indent_width = 2
