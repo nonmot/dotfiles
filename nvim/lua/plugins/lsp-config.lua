@@ -41,5 +41,6 @@ return {
 			capabilities = capabilities,
 		})
 		lspconfig.terraform_lsp.setup({})
+		lspconfig.tailwindcss.setup({})
 	end,
 }
