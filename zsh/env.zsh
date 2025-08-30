@@ -26,3 +26,5 @@ export PATH="/Users/aa549998/.rd/bin:$PATH"
 # Setting for act
 export DOCKER_HOST=unix:///Users/aa549998/.rd/docker.sock
 
+# Obsidian.nvim
+export OBSIDIAN_DIR="/Users/aa549998/Library/Mobile Documents/iCloud~md~obsidian/Documents/Work"

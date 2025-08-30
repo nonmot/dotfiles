@@ -1,6 +1,6 @@
 vim.opt_local.conceallevel = 2
 
-personal_valut_path = "/Users/aa549998/Library/Mobile Documents/iCloud~md~obsidian/Documents/My Vault"
+valut_path = vim.loop.os_getenv("OBSIDIAN_DIR")
 
 return {
 	"epwalsh/obsidian.nvim",
@@ -13,14 +13,11 @@ return {
 		-- see below for full list of optional dependencies 👇
 	},
 	opts = {
+		ui = {},
 		workspaces = {
 			{
-				name = "personal",
-				path = personal_valut_path,
-			},
-			{
-				name = "training",
-				path = "~/dev/fy25-training/e-learning",
+				name = "main",
+				path = valut_path,
 			},
 		},
 		daily_notes = {
