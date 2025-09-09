@@ -1,11 +1,11 @@
 return {
 	"hrsh7th/nvim-cmp",
+	lazy = true,
 	event = "InsertEnter",
 	dependencies = {
 		"hrsh7th/cmp-nvim-lsp",
 		"hrsh7th/cmp-buffer",
 		"hrsh7th/cmp-path",
-		"hrsh7th/cmp-cmdline",
 		"saadparwaiz1/cmp_luasnip",
 		"hrsh7th/cmp-nvim-lsp-signature-help",
 		"L3MON4D3/LuaSnip",
@@ -39,7 +39,7 @@ return {
 				{ name = "luasnip", keyword_length = 2 },
 			}, {
 				{ name = "buffer", keyword_length = 2 }, -- バッファの内容を補完候補に含める
-				{ name = "cmdline", keyword_length = 2 }, -- バッファの内容を補完候補に含める
+				-- { name = "cmdline", keyword_length = 2 }, -- バッファの内容を補完候補に含める
 				{ name = "path", keyword_length = 2 },
 			}),
 			window = {
@@ -47,15 +47,6 @@ return {
 				documentation = cmp.config.window.bordered(),
 			},
 			experimental = { ghost_text = true },
-		})
-
-		cmp.setup.cmdline("/", {
-			mapping = cmp.mapping.preset.cmdline(),
-			sources = { { name = "buffer" } },
-		})
-		cmp.setup.cmdline(":", {
-			mapping = cmp.mapping.preset.cmdline(),
-			sources = { { name = "path" }, { name = "cmdline" } },
 		})
 	end,
 }

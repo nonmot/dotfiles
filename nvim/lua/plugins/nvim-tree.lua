@@ -1,11 +1,13 @@
 return {
 	"nvim-tree/nvim-tree.lua",
-	config = function()
+	cmd = { "NvimTreeToggle", "NvimTreeFindFile" },
+	init = function()
 		-- disable netrw at the very start of your init.lua
 		vim.g.loaded_netrw = 1
 		vim.g.loaded_netrwPlugin = 1
 		vim.opt.termguicolors = true
-
+	end,
+	config = function()
 		local function my_on_attach(bufnr)
 			local api = require("nvim-tree.api")
 
