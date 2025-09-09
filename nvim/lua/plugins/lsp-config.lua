@@ -15,8 +15,8 @@ return {
 			capabilities = capabilities,
 		})
 
-		local virtual_env_path = vim.trim(vim.fn.system("poetry config virtualenvs.path"))
-		local virtual_env_dir = vim.trim(vim.fn.system("poetry env list")):gsub("%s*%([^)]*%)", "")
+		local virtual_env_path = "."
+		local virtual_env_dir = ".venv"
 
 		local python_path = "python"
 		if #vim.split(virtual_env_dir, "\n") == 1 then
