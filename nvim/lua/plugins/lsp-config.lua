@@ -30,10 +30,15 @@ return {
 					pythonPath = python_path,
 					venvPath = virtual_env_path,
 					venv = vim.trim(virtual_env_dir),
+					analysis = {
+						typeCheckingMode = "strict",
+					},
 				},
 			},
 		})
 		lspconfig.ts_ls.setup({
+			root_dir = lspconfig.util.root_pattern("tsconfig.json", "jsconfig.json", "package.json"),
+			single_file_support = false,
 			capabilities = capabilities,
 		})
 		lspconfig.html.setup({
@@ -42,7 +47,8 @@ return {
 		lspconfig.cssls.setup({
 			capabilities = capabilities,
 		})
-		lspconfig.terraform_lsp.setup({})
+		lspconfig.terraform_ls.setup({})
 		lspconfig.tailwindcss.setup({})
+		lspconfig.rust_analyzer.setup({})
 	end,
 }
