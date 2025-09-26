@@ -2,23 +2,19 @@ return {
 	{
 		"mason-org/mason.nvim",
 		cmd = { "Mason", "MasonInstall", "MasonUpdate" },
+		build = ":MasonUpdate",
 		config = function()
 			require("mason").setup({})
 		end,
 	},
 	{
 		"mason-org/mason-lspconfig.nvim",
-		config = function()
-			require("mason-lspconfig").setup({
-				ensure_installed = {
-					"clangd",
-					"pyright",
-					"ts_ls",
-					"html",
-					"cssls",
-					"tailwindcss",
-				},
-			})
-		end,
+		opts = {
+			ensure_installed = { "pyright", "clangd", "ts_ls", "html", "cssls", "tailwindcss", "terraformls" },
+		},
+		dependencies = {
+			{ "williamboman/mason.nvim", opts = {} },
+			"neovim/nvim-lspconfig",
+		},
 	},
 }

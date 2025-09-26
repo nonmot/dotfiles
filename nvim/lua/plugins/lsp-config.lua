@@ -6,12 +6,11 @@ return {
 		"hrsh7th/cmp-nvim-lsp",
 	},
 	config = function()
-		local lspconfig = require("lspconfig")
 		local capabilities = require("cmp_nvim_lsp").default_capabilities()
-		lspconfig.clangd.setup({
+		vim.lsp.config("clangd", {
 			capabilities = capabilities,
 		})
-		lspconfig.markdown_oxide.setup({
+		vim.lsp.config("markdown_oxide", {
 			capabilities = capabilities,
 		})
 
@@ -23,7 +22,7 @@ return {
 			python_path = string.format("%s/%s/bin/python", virtual_env_path, virtual_env_dir)
 		end
 
-		lspconfig.pyright.setup({
+		vim.lsp.config("pyright", {
 			capabilities = capabilities,
 			settings = {
 				python = {
@@ -36,19 +35,18 @@ return {
 				},
 			},
 		})
-		lspconfig.ts_ls.setup({
-			root_dir = lspconfig.util.root_pattern("tsconfig.json", "jsconfig.json", "package.json"),
+		vim.lsp.config("ts_ls", {
 			single_file_support = false,
 			capabilities = capabilities,
 		})
-		lspconfig.html.setup({
+		vim.lsp.config("html", {
 			capabilities = capabilities,
 		})
-		lspconfig.cssls.setup({
+		vim.lsp.config("cssls", {
 			capabilities = capabilities,
 		})
-		lspconfig.terraform_ls.setup({})
-		lspconfig.tailwindcss.setup({})
-		lspconfig.rust_analyzer.setup({})
+		vim.lsp.config("terraformls", {})
+		vim.lsp.config("tailwindcss", {})
+		vim.lsp.config("rust_analyzer", {})
 	end,
 }
