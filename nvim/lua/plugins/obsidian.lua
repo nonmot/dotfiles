@@ -1,12 +1,12 @@
-vim.opt_local.conceallevel = 2
+vim.opt.conceallevel = 2
+-- vim.opt.conceallevel = 2
 
 valut_path = vim.loop.os_getenv("OBSIDIAN_DIR")
 
 return {
 	"epwalsh/obsidian.nvim",
 	version = "*", -- recommended, use latest release instead of latest commit
-	lazy = true,
-	ft = "markdown",
+	event = { "BufReadPre *.md", "BufNewFile *.md" },
 	dependencies = {
 		-- Required.
 		"nvim-lua/plenary.nvim",
@@ -15,7 +15,17 @@ return {
 		-- see below for full list of optional dependencies 👇
 	},
 	opts = {
-		ui = {},
+		ui = {
+			enable = true,
+			checkboxes = {
+				[" "] = { char = "󰄱", hl_group = "ObsidianTodo" },
+				["x"] = { char = "", hl_group = "ObsidianDone" },
+				[">"] = { char = "", hl_group = "ObsidianRightArrow" },
+				["~"] = { char = "󰰱", hl_group = "ObsidianTilde" },
+				["!"] = { char = "", hl_group = "ObsidianImportant" },
+				["-"] = { char = "💻" },
+			},
+		},
 		workspaces = {
 			{
 				name = "main",
