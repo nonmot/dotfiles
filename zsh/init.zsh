@@ -20,6 +20,10 @@ if [[ -r "$ZDOTDIR/aliases.zsh" ]]; then
   source "$ZDOTDIR/aliases.zsh"
 fi
 
+if [[ -r "$ZDOTDIR/completion.zsh" ]]; then
+  source "$ZDOTDIR/completion.zsh"
+fi
+
 if [[ -r "$ZDOTDIR/tools/fzf.zsh" ]]; then
   source "$ZDOTDIR/tools/fzf.zsh"
 fi
