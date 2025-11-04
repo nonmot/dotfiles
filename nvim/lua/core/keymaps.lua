@@ -26,3 +26,27 @@ vim.keymap.set("n", "<Leader>e", ":NvimTreeToggle<CR>", { noremap = true, silent
 
 -- Aerial
 set("n", "<Leader>a", "<cmd>AerialToggle!<CR>", { noremap = true, silent = true })
+
+-- Telescope
+local builtin = require("telescope.builtin")
+vim.keymap.set(
+	"n",
+	"<leader>ff",
+	builtin.find_files,
+	{ desc = "Telescope find files. Lists files in your current working directory, respects .gitignore." }
+)
+vim.keymap.set("n", "<leader>fg", builtin.live_grep, {
+	desc = "Telescope live grep. Search for a string in your current working directory and get results live as you type, respects .gitignore. ",
+})
+vim.keymap.set(
+	"n",
+	"<leader>fb",
+	builtin.buffers,
+	{ desc = "Telescope buffers. Lists open buffers in current neovim instance." }
+)
+vim.keymap.set(
+	"n",
+	"<leader>fh",
+	builtin.help_tags,
+	{ desc = "Telescope help tags. Lists available help tags and opens a new window with the relevant help info on <cr>" }
+)
