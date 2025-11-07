@@ -23,7 +23,7 @@ return {
 				[">"] = { char = "", hl_group = "ObsidianRightArrow" },
 				["~"] = { char = "󰰱", hl_group = "ObsidianTilde" },
 				["!"] = { char = "", hl_group = "ObsidianImportant" },
-				["-"] = { char = "💻" },
+				["-"] = { char = "", hl_group = "ObsidianImportant" },
 			},
 		},
 		workspaces = {
