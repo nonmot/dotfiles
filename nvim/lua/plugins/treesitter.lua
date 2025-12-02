@@ -5,6 +5,7 @@ return {
 		local configs = require("nvim-treesitter.configs")
 
 		configs.setup({
+      auto_install = false,
 			ensure_installed = { "c" },
 			sync_install = false,
 			highlight = { enable = true },
