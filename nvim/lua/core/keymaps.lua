@@ -23,6 +23,7 @@ vim.keymap.set("t", "<Esc>", "<C-\\><C-n>", { noremap = true, silent = true })
 
 -- Filer
 vim.keymap.set("n", "<Leader>e", ":NvimTreeToggle<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "-", "<CMD>Oil<CR>", { noremap = true, silent = true })
 
 -- Aerial
 set("n", "<Leader>a", "<cmd>AerialToggle!<CR>", { noremap = true, silent = true })
