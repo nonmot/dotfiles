@@ -41,7 +41,7 @@ vim.o.wildmode = "longest:full,full"
 vim.o.wildmenu = true
 
 -- Colorscheme
-vim.cmd([[colorscheme tokyonight]])
+vim.cmd([[colorscheme kanagawa]])
 vim.cmd([[
   highlight NvimTreeNormal guibg=none
   highlight NvimTreeNormalNC guibg=none
