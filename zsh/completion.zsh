@@ -1,5 +1,5 @@
 fpath=("$HOME/.zsh" $fpath)
-autoload -Uz compinit && compinit
+autoload -Uz compinit && compinit -C
 autoload -U +X bashcompinit && bashcompinit
 
 complete -o nospace -C /opt/homebrew/bin/terraform terraform
