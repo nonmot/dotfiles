@@ -36,6 +36,14 @@ vim.api.nvim_create_autocmd("FileType", {
 	end,
 })
 
+-- highlight yanked
+vim.api.nvim_create_autocmd("TextYankPost", {
+	pattern = "*",
+	callback = function()
+		vim.highlight.on_yank({ timeout = 300 })
+	end,
+})
+
 -- Completion
 vim.o.wildmode = "longest:full,full"
 vim.o.wildmenu = true
