@@ -14,9 +14,6 @@ export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
-# poetry
-export PATH="/Users/aa549998/.local/bin:$PATH"
-
 # NVM (Node Version Manager)
 # --- nvm lazy load + cd hook ---
 export NVM_DIR="$HOME/.nvm"
@@ -52,12 +49,4 @@ _nvm_auto_use() {
   nvm use --silent "$ver" >/dev/null
 }
 add-zsh-hook chpwd _nvm_auto_use
-
-
-### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
-export PATH="/Users/aa549998/.rd/bin:$PATH"
-### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
-
-# Obsidian.nvim
-export OBSIDIAN_DIR="/Users/aa549998/Library/Mobile Documents/iCloud~md~obsidian/Documents/Work"
 

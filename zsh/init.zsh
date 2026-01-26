@@ -12,12 +12,20 @@ if [[ -r "$ZDOTDIR/env.zsh" ]];then
   source "$ZDOTDIR/env.zsh" 
 fi
 
+if [[ -r "$ZDOTDIR/env.local.zsh" ]];then
+  source "$ZDOTDIR/env.local.zsh" 
+fi
+
 if [[ -r "$ZDOTDIR/omz.zsh" ]]; then
   source "$ZDOTDIR/omz.zsh"
 fi
 
 if [[ -r "$ZDOTDIR/aliases.zsh" ]]; then
   source "$ZDOTDIR/aliases.zsh"
+fi
+
+if [[ -r "$ZDOTDIR/aliases.local.zsh" ]]; then
+  source "$ZDOTDIR/aliases.local.zsh"
 fi
 
 if [[ -r "$ZDOTDIR/completion.zsh" ]]; then
