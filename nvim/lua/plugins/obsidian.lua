@@ -45,10 +45,10 @@ return {
 			folder = "Templates",
 			substitutions = {
 				yesterday_link = function()
-					return os.date("Daily/%Y/%m/%Y-%m-%d", os.time() - 86400)
+					return os.date("%Y-%m-%d", os.time() + 32400 - 86400)
 				end,
 				tomorrow_link = function()
-					return os.date("Daily/%Y/%m/%Y-%m-%d", os.time() + 86400)
+					return os.date("%Y-%m-%d", os.time() + 32400 + 86400)
 				end,
 			},
 		},
