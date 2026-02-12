@@ -24,11 +24,10 @@ return {
 
 		vim.lsp.config("pyright", {
 			capabilities = capabilities,
-      root_markers = {
-        ".git",
-        "pyproject.toml",
-        "pyrightconfig.json",
-      },
+			root_markers = {
+				"pyproject.toml",
+				"pyrightconfig.json",
+			},
 			settings = {
 				python = {
 					pythonPath = python_path,
