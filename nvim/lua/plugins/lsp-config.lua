@@ -52,5 +52,8 @@ return {
 		vim.lsp.config("terraformls", {})
 		vim.lsp.config("tailwindcss", {})
 		vim.lsp.config("rust_analyzer", {})
+		vim.lsp.config("astro", {
+      capabilities=capabilities,
+    })
 	end,
 }
