@@ -14,6 +14,9 @@ export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
+# poetry
+export PATH="$HOME/.local/bin:$PATH"
+
 # NVM (Node Version Manager)
 # --- nvm lazy load + cd hook ---
 export NVM_DIR="$HOME/.nvm"
