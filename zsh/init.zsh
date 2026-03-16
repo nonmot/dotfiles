@@ -46,3 +46,5 @@ fi
 
 fpath=("$ZDOTDIR/functions" $fpath)
 autoload -Uz $ZDOTDIR/functions/*(:t)
+
+eval "$(starship init zsh)"
