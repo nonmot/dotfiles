@@ -48,7 +48,7 @@
 # # Just for example:
 # resize-overlay-duration = 4s 200ms
 
-theme = tokyonight
+theme = TokyoNight Day
 macos-titlebar-style = hidden
 macos-non-native-fullscreen = true
 
