@@ -9,10 +9,8 @@ HISTSIZE=100000
 # Homebrew
 export PATH="/opt/homebrew/bin:$PATH"
 
-# pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+# mise
+eval "$(mise env)"
 
 # poetry
 export PATH="$HOME/.local/bin:$PATH"
