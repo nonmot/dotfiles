@@ -1,10 +1,6 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 format = """
-[](red)\
-$os\
-$username\
-[](bg:peach fg:red)\
 $directory\
 [](bg:yellow fg:peach)\
 $git_branch\
@@ -83,6 +79,8 @@ format = '[[ $symbol $branch ](fg:crust bg:yellow)]($style)'
 [git_status]
 style = "bg:yellow"
 format = '[[($all_status$ahead_behind )](fg:crust bg:yellow)]($style)'
+modified = "M"
+untracked = "U"
 
 [nodejs]
 symbol = ""
