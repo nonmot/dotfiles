@@ -55,5 +55,8 @@ return {
 		vim.lsp.config("astro", {
       capabilities=capabilities,
     })
+    vim.lsp.config("gopls", {
+      capabilities=capabilities,
+    })
 	end,
 }

@@ -10,7 +10,7 @@ return {
 	{
 		"mason-org/mason-lspconfig.nvim",
 		opts = {
-			ensure_installed = { "pyright", "clangd", "ts_ls", "html", "cssls", "tailwindcss", "terraformls" },
+			ensure_installed = { "pyright", "clangd", "ts_ls", "html", "cssls", "tailwindcss", "terraformls", "gopls" },
 		},
 		dependencies = {
 			{ "williamboman/mason.nvim", opts = {} },
