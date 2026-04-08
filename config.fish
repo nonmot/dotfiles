@@ -17,5 +17,12 @@ starship init fish | source
 set -gx EDITOR nvim
 set -gx VISUAL nvim
 
+function today_daily_note
+  echo "nvim Daily/"(date +%Y/%m)"/"(date +%Y-%m-%d)".md"
+end
+
 abbr vim "nvim"
 abbr lg "lazygit"
+abbr y "yazi"
+abbr ghe "GH_HOST=github.ibm.com gh"
+abbr tdn --function today_daily_note
