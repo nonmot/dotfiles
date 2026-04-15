@@ -10,10 +10,15 @@
   ];
 
   home.file = {
+    ".config/starship.toml".source = ./starship/starship.toml;
   };
 
   home.sessionVariables = {
   };
 
   programs.home-manager.enable = true;
+
+  programs.starship = {
+    enable = true;
+  };
 }
