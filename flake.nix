@@ -25,6 +25,7 @@
         modules = [
           ./home-manager/home.nix
           ./home-manager/nvim.nix
+          ./home-manager/fish.nix
         ];
 
         # Optionally use extraSpecialArgs
