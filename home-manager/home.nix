@@ -15,13 +15,10 @@
   ];
 
   home.file = {
-    ".config/starship.toml".source = ./starship/starship.toml;
-    ".tmux.conf".source = ../tmux.conf;
     ".config/gh/config.yml".source = ./gh/config.yml;
   };
 
-  home.sessionVariables = {
-  };
+  xdg.configFile."starship.toml".source = ./starship/starship.toml;
 
   programs.home-manager.enable = true;
 
@@ -31,6 +28,7 @@
 
   programs.tmux = {
     enable = true;
+    extraConfig = builtins.readFile ../tmux.conf;
   };
 
   programs.fzf = {
