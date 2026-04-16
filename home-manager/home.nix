@@ -47,10 +47,6 @@
     enable = true;
   };
 
-  programs.gh = {
-    enable = false;
-  };
-
   programs.mise = {
     enable = true;
   };
