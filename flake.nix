@@ -18,21 +18,18 @@
         inherit system;
         config.allowUnfree = true;
       };
-    in
-    {
-      homeConfigurations."nonakamotoya" = home-manager.lib.homeManagerConfiguration {
+      mkHome = username: home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-
-        # Specify your home configuration modules here, for example,
-        # the path to your home.nix.
         modules = [
           ./home-manager/home.nix
           ./home-manager/nvim.nix
           ./home-manager/fish.nix
         ];
-
-        # Optionally use extraSpecialArgs
-        # to pass through arguments to home.nix
+        extraSpecialArgs = { inherit username; };
       };
+    in
+    {
+      homeConfigurations."nonakamotoya" = mkHome "nonakamotoya";
+      homeConfigurations."aa549998" = mkHome "aa549998";
     };
 }

@@ -16,6 +16,7 @@ starship init fish | source
 
 set -gx EDITOR nvim
 set -gx VISUAL nvim
+set -x TERM xterm-256color
 
 function today_daily_note
   echo "nvim Daily/"(date +%Y/%m)"/"(date +%Y-%m-%d)".md"
