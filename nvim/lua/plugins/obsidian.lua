@@ -1,5 +1,3 @@
-vim.opt.conceallevel = 2
-
 valut_path = vim.loop.os_getenv("OBSIDIAN_DIR")
 
 return {
