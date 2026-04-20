@@ -16,6 +16,8 @@
 
   home.file = {
     ".config/gh/config.yml".source = ./gh/config.yml;
+    ".claude/settings.json".source = ./claude/settings.json;
+    ".claude/keybindings.json".source = ./claude/keybindings.json;
   };
 
   xdg.configFile."starship.toml".source = ./starship/starship.toml;
