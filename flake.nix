@@ -18,18 +18,18 @@
         inherit system;
         config.allowUnfree = true;
       };
-      mkHome = username: home-manager.lib.homeManagerConfiguration {
+      mkHome = username: extraModules: home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = [
           ./home-manager/home.nix
           ./home-manager/nvim.nix
           ./home-manager/fish.nix
-        ];
+        ] ++ extraModules;
         extraSpecialArgs = { inherit username; };
       };
     in
     {
-      homeConfigurations."nonakamotoya" = mkHome "nonakamotoya";
-      homeConfigurations."aa549998" = mkHome "aa549998";
+      homeConfigurations."nonakamotoya" = mkHome "nonakamotoya" [];
+      homeConfigurations."aa549998" = mkHome "aa549998" [ ./home-manager/podman.nix ];
     };
 }
