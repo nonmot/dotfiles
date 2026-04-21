@@ -27,3 +27,7 @@ abbr lg "lazygit"
 abbr y "yazi"
 abbr ghe "GH_HOST=github.ibm.com gh"
 abbr tdn --function today_daily_note
+
+if test -f ~/.config/fish/local.fish
+    source ~/.config/fish/local.fish
+end
