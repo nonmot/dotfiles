@@ -168,3 +168,7 @@ on-mode-changed = []
 [workspace-to-monitor-force-assignment]
   1 = 'main'
   2 = 'secondary'
+
+[[on-window-detected]]
+  if.app-id = 'com.cisco.secureclient.gui'
+  run = 'layout floating'
