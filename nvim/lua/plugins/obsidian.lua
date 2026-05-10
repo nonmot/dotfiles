@@ -1,4 +1,19 @@
-valut_path = vim.loop.os_getenv("OBSIDIAN_DIR")
+local vault_path = vim.loop.os_getenv("OBSIDIAN_DIR")
+local personal_path = vim.loop.os_getenv("OBSIDIAN_PERSONAL_DIR")
+
+local workspaces = {
+	{
+		name = "main",
+		path = vault_path,
+	},
+}
+
+if personal_path then
+	table.insert(workspaces, {
+		name = "personal",
+		path = personal_path,
+	})
+end
 
 return {
 	"epwalsh/obsidian.nvim",
@@ -23,12 +38,7 @@ return {
 				["-"] = { char = "", hl_group = "ObsidianImportant" },
 			},
 		},
-		workspaces = {
-			{
-				name = "main",
-				path = valut_path,
-			},
-		},
+		workspaces = workspaces,
 		daily_notes = {
 			folder = "Daily",
 			date_format = "%Y/%m/%Y-%m-%d",
