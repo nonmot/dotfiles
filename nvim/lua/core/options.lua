@@ -47,10 +47,3 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 -- Completion
 vim.o.wildmode = "longest:full,full"
 vim.o.wildmenu = true
-
--- Colorscheme
-vim.cmd([[colorscheme kanagawa]])
-vim.cmd([[
-  highlight NvimTreeNormal guibg=none
-  highlight NvimTreeNormalNC guibg=none
-]])
