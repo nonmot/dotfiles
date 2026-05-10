@@ -12,6 +12,7 @@
     pre-commit
     terraform
     gh
+    ripgrep
   ];
 
   home.file = {
