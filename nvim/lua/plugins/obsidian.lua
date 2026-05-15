@@ -40,9 +40,9 @@ return {
 		},
 		workspaces = workspaces,
 		daily_notes = {
-			folder = "Daily",
-			date_format = "%Y/%m/%Y-%m-%d",
-			template = "template_daily.md",
+			folder = "Weekly",
+			date_format = "%G/W%V",
+			template = "template_weekly.md",
 		},
 		attachments = {
 			img_folder = "Images",
@@ -51,11 +51,11 @@ return {
 		templates = {
 			folder = "Templates",
 			substitutions = {
-				yesterday_link = function()
-					return os.date("%Y-%m-%d", os.time() + 32400 - 86400)
+				last_week_link = function()
+					return os.date("%G-W%V", os.time() + 32400 - 604800)
 				end,
-				tomorrow_link = function()
-					return os.date("%Y-%m-%d", os.time() + 32400 + 86400)
+				next_week_link = function()
+					return os.date("%G-W%V", os.time() + 32400 + 604800)
 				end,
 			},
 		},

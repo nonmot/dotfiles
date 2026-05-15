@@ -18,15 +18,15 @@ set -gx EDITOR nvim
 set -gx VISUAL nvim
 set -x TERM xterm-256color
 
-function today_daily_note
-  echo "nvim Daily/"(date +%Y/%m)"/"(date +%Y-%m-%d)".md"
+function today_weekly_note
+  echo "nvim Weekly/"(date +%G/W%V)".md"
 end
 
 abbr vim "nvim"
 abbr lg "lazygit"
 abbr y "yazi"
 abbr ghe "GH_HOST=github.ibm.com gh"
-abbr tdn --function today_daily_note
+abbr tdn --function today_weekly_note
 
 if test -f ~/.config/fish/local.fish
     source ~/.config/fish/local.fish
