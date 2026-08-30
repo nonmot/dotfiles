@@ -1,9 +1,11 @@
-{ pkgs, ... }:
+{ pkgs, pkgs-nvim, ... }:
 
 let
-  neovim-v11 = pkgs.neovim-unwrapped.overrideAttrs (_: {
+  # pkgs-nvim は flake.nix で固定した旧 nixpkgs。
+  # 新しい nixpkgs の tree-sitter では 0.11.2 がビルドできないため。
+  neovim-v11 = pkgs-nvim.neovim-unwrapped.overrideAttrs (_: {
     version = "0.11.2";
-    src = pkgs.fetchFromGitHub {
+    src = pkgs-nvim.fetchFromGitHub {
       owner = "neovim";
       repo = "neovim";
       rev = "v0.11.2";
