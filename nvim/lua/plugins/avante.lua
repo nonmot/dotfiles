@@ -18,6 +18,10 @@ return {
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 		"MunifTanjim/nui.nvim",
+		{
+			"ColinKennedy/mega.cmdparse",
+			dependencies = { "ColinKennedy/mega.logging" },
+		},
 		"nvim-telescope/telescope.nvim",
 		"hrsh7th/nvim-cmp",
 		"nvim-tree/nvim-web-devicons",

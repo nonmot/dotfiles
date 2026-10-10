@@ -190,6 +190,10 @@ on-mode-changed = []
   run = 'move-node-to-workspace 1'
 
 [[on-window-detected]]
+  if.app-id = 'com.google.Chrome'
+  run = 'move-node-to-workspace 9'
+
+[[on-window-detected]]
   if.app-id = 'com.mitchellh.ghostty'
   run = 'move-node-to-workspace 1'
 

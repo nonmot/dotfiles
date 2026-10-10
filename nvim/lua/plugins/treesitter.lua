@@ -1,5 +1,6 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
+	-- `master` is frozen and does not support Neovim 0.12.
 	branch = "main",
 	lazy = false,
 	build = ":TSUpdate",
